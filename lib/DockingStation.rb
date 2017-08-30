@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Docking_Station
 
 
@@ -8,5 +9,11 @@ end
 
 class Bike
   def working?
+=======
+
+
+class DockingStation
+  def initialize
+>>>>>>> refs/remotes/origin/master
   end
 end
