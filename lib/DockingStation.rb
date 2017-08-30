@@ -1,19 +1,16 @@
-<<<<<<< HEAD
+
 class Docking_Station
 
-
 def release_bike
-
+  Bike.new
 end
 end
 
 class Bike
+  def intialize
+bike = Bike.new
+end
   def working?
-=======
-
-
-class DockingStation
-  def initialize
->>>>>>> refs/remotes/origin/master
-  end
+    print "The bike works"
+end
 end
