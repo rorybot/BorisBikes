@@ -18,7 +18,7 @@ class Docking_Station
 
   def dock(bike)
     fail "Dock full" if full?
-    @bikes << bike
+    same_bike?(bike) ? (print "You're not holding a bike"):(@bikes << bike)
 
   end
 
@@ -26,16 +26,36 @@ class Docking_Station
     @bikes
   end
 
+  def Hello
+    print 'Hello World'
+  end
+
 
 
     private
 
     def empty?
+      if 1 == 1
       @bikes.empty?
     end
+    end
+
 
     def full?
       @bikes.count >= capacity
     end
+
+    def same_bike?(bike)
+      @bikes.include? bike
+    end
+
+
+
+end
+
+class HelloWorld
+  def Hello
+    print 'Hello World'
+  end
 
 end
