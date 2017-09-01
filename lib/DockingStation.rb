@@ -26,10 +26,9 @@ class Docking_Station
     @bikes
   end
 
-  def Hello
-    print 'Hello World'
+  def hello_world
+    "hello world"
   end
-
 
 
     private
@@ -50,12 +49,5 @@ class Docking_Station
     end
 
 
-
-end
-
-class HelloWorld
-  def Hello
-    print 'Hello World'
-  end
 
 end

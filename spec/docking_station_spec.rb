@@ -52,6 +52,13 @@ describe Docking_Station do
 
   end
 
+  it 'hello world' do
+    boris = double(Bike)
+    subject.hello_world
+    expect(subject.hello_world).to eq "hello world"
+
+  end
+
 
 
 
