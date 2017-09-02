@@ -8,6 +8,7 @@ class Docking_Station
   def initialize (capacity=DEFAULT_CAPACITY)
     @bikes = []
     @capacity = capacity
+    @instance_of_bike = Bike.new
   end
 
 
@@ -16,18 +17,33 @@ class Docking_Station
     @bikes.pop
   end
 
-  def dock(bike)
+  def dock(bike, report)
     fail "Dock full" if full?
-    same_bike?(bike) ? (print "You're not holding a bike"):(@bikes << bike)
+    if same_bike?(bike)
+      print "You're not holding a bike"
+    elsif report == "Broken"
+      @bikes << bike
+      report_broken
+    else
+      @bikes << bike
+    end
 
   end
 
   def bikes
     @bikes
   end
+  #
+  # def hello_world
+  #   "hello world"
+  # end
 
-  def hello_world
-    "hello world"
+  def report_broken
+    "Broken"
+  end
+
+  def bike_docking_message
+    "Is your bike broken?"
   end
 
 
